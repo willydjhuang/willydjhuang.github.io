@@ -170,6 +170,16 @@ collections:
     projects:
         output: true
         permalink: /projects/:path/
+    research_exps:
+        defaults:
+            layout: post
+        output: true
+        permalink: /research_exps/:path/
+    education:
+        defaults:
+            layout: post
+        output: true
+        permalink: /education/:path/
 
 announcements:
     enabled: true

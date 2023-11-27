@@ -35,23 +35,33 @@ layout: default
 
         <div class="clearfix">{{ content }}</div>
 
+        <!-- Education -->
+        {% if page.education -%}
+        <h2>Education</h2>
+        {%- include education.html limit=true %} {%- endif %}
+
+        <!-- Research Experience -->
+        {% if page.research_experience -%}
+        <h2>Research Experiences</h2>
+        {%- include research_exps.html limit=true %} {%- endif %}
+
         <!-- News -->
-        <!-- {% if page.news and site.announcements.enabled -%}
+        {% if page.news and site.announcements.enabled -%}
         <h2>
             <a href="{{ '/news/' | relative_url }}" style="color: inherit"
-                >news</a
+                >News</a
             >
         </h2>
-        {%- include news.html limit=true %} {%- endif %} -->
+        {%- include news.html limit=true %} {%- endif %}
 
         <!-- Latest posts -->
-        <!-- {% if page.latest_posts -%}
+        {% if page.latest_posts -%}
         <h2>
             <a href="{{ '/blog/' | relative_url }}" style="color: inherit"
-                >latest posts</a
+                >Latest Posts</a
             >
         </h2>
-        {%- include latest_posts.html %} {%- endif %} -->
+        {%- include latest_posts.html %} {%- endif %}
 
         <!-- Selected papers -->
         {% if page.selected_papers -%}
@@ -59,7 +69,7 @@ layout: default
             <a
                 href="{{ '/publications/' | relative_url }}"
                 style="color: inherit"
-                >selected publications</a
+                >Selected Publications</a
             >
         </h2>
         {%- include selected_papers.html %} {%- endif %}

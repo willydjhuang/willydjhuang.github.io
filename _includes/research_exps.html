@@ -1,0 +1,50 @@
+<div class="news">
+    {% if site.research_exps != blank -%} {%- assign research_exps_size =
+    site.research_exps | size -%}
+    <div
+        class="table-responsive"
+        {%
+        if
+        include.limit
+        and
+        site.announcements.scrollable
+        and
+        research_exps_size
+    >
+        3 %}style="max-height: 60vw"{% endif %}>
+        <table class="table table-sm table-borderless">
+            {%- assign research_exps = site.research_exps | reverse -%} {% if
+            include.limit and site.announcements.limit %} {% assign
+            research_exps_limit = site.announcements.limit %} {% else %} {%
+            assign research_exps_limit = research_exps_size %} {% endif %} {%
+            for item in research_exps limit: research_exps_limit %}
+            <tr>
+                <th scope="row" style="width: 15%">
+                    <!-- {{ item.date | date: "%b %-d, %Y" }} -->
+                    <img style="width: 80%" src="assets/img/{{ item.icon }}" />
+                </th>
+                <!-- <img
+                    class="preview z-depth-1 rounded"
+                    scope="row"
+                    style="width: 20%"
+                    src="assets/img/{{ item.icon }}"
+                /> -->
+                <td>
+                    {% if item.inline -%} {{ item.content | remove: '
+                    <p>' | remove: '</p>
+                    ' | emojify }} {%- else -%}
+                    <a
+                        class="research_exps-title"
+                        href="{{ item.url | relative_url }}"
+                        >{{ item.title }}</a
+                    >
+                    {%- endif %}
+                </td>
+            </tr>
+            {%- endfor %}
+        </table>
+    </div>
+    {%- else -%}
+    <p>No research_exps so far...</p>
+    {%- endif %}
+</div>
