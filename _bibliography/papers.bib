@@ -13,7 +13,18 @@
       PDF={assr-nerf.pdf},
       selected={true},
       note={Preprint (under review)},
-      preview={assr-nerf.gif}
+      preview={assr-nerf.gif},
+      website={https://assr-nerf.github.io/},
+      abstract={NeRF-based methods reconstruct 3D scenes by building a radiance field with implicit or explicit representations. While existing state-of-the-art methods for 3D
+scene reconstruction can capture geometry and appearance
+of a scene accurately, the quality of the rendered novel
+views is bounded by the training views. On the other
+hand, single-image super-resolution aims to restore lowresolution (LR) images to high-resolution (HR) counterparts and enhance details as well as textures simultaneously. To improve the rendering quality of a radiance field
+trained with LR training views, we propose Arbitrary-Scale
+Super-Resolution NeRF (ASSR-NeRF), a novel framework
+for super-resolution (SR) of neural radiance field. A voxelbased radiance field is first constructed with training views.
+Then, an attention-based VoxelGridSR module performs SR
+directly on the constructed radiance field, instead of the rendered 2D views, to generate finer details and textures in rendered views. Experiments with both quantitative and qualitative comparisons show that our proposed method significantly improves rendering quality.}
 }
 
 @misc{huang2023sbvqa,
@@ -26,8 +37,21 @@
       PDF={sb-vqa.pdf},
       selected={true},
       note={IEEE/CVF CVPR NTIRE 2023},
-      HTML={https://arxiv.org/abs/2305.08408},
-      preview={vqa_compare.gif}
+      preview={vqa_compare.gif},
+      abstract={In recent years, several video quality assessment (VQA)
+      methods have been developed, achieving high performance.
+      However, these methods were not specifically trained for enhanced videos, which limits their ability to predict video
+      quality accurately based on human subjective perception.
+      To address this issue, we propose a stack-based framework
+      for VQA that outperforms existing state-of-the-art methods
+      on VDPVE, a dataset consisting of enhanced videos.
+      In addition to proposing the VQA framework for enhanced videos, we also investigate its application on professionally generated content (PGC). To address copyright issues with premium content, we create the PGCVQ
+      dataset, which consists of videos from YouTube. We evaluate our proposed approach and state-of-the-art methods on
+      PGCVQ, and provide new insights on the results. Our experiments demonstrate that existing VQA algorithms can be
+      applied to PGC videos, and we find that VQA performance
+      for PGC videos can be improved by considering the plot of
+      a play, which highlights the importance of video semantic
+      understanding.}
 }
 
 @INPROCEEDINGS{10186667,
@@ -42,7 +66,16 @@
   doi={10.1109/IV55152.2023.10186667},
   selected={true},
   note={IEEE Intelligent Vehicles Symposium 2023},
-  HTML={https://ieeexplore.ieee.org/document/10186667},
-  preview={platoon_preview.png}
+  preview={platoon_preview.png},
+  abstract={Platooning is a representative application of connected and autonomous vehicles. The information exchanged
+  between connected functions and the precise control of autonomous functions provide great safety and traffic capacity. In
+  this paper, we develop an advanced consensus-based approach
+  for platooning. By applying consensus-based fault detection and
+  adaptive gains to controllers, we can detect faulty position
+  and speed information from vehicles and reinstate the normal
+  behavior of the platooning. Experimental results demonstrate
+  that the developed approach outperforms the state-of-the-art
+  approaches and achieves small steady state errors and small
+  settling times under scenarios with faults.}
 }
 
