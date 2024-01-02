@@ -26,6 +26,8 @@ ENV LANG=en_US.UTF-8 \
 # install jekyll and dependencies
 RUN gem install jekyll bundler
 
+RUN gem install jekyll-seo-tag
+
 RUN mkdir /srv/jekyll
 
 ADD Gemfile /srv/jekyll
