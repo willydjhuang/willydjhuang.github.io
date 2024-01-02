@@ -13,7 +13,6 @@ group :jekyll_plugins do
     gem 'jekyll-minifier'
     gem 'jekyll-paginate-v2'
     gem 'jekyll-scholar'
-    gem 'jekyll-sitemap'
     gem 'jekyll-toc'
     gem 'jekyll-twitter-plugin'
     gem 'jemoji'
@@ -21,6 +20,8 @@ group :jekyll_plugins do
     gem 'unicode_utils'
     gem 'webrick'
     # gem 'jekyll-seo-tag'
+    gem 'jekyll-sitemap'
+    
 end
 group :other_plugins do
     gem 'feedjira'
