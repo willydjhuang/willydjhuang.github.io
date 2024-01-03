@@ -5,6 +5,21 @@
         {%- if page.redirect -%}
         <meta http-equiv="refresh" content="3; url={{ site.baseurl }}/" />
         {%- endif -%} {% include head.html %}
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-LNGN6Y42X7"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-LNGN6Y42X7");
+        </script>
+
         <meta
             name="google-site-verification"
             content="mvBlT70l-G-KKMU94Y7VfRupMkbGMwN3SSXwrxZWJ0w"
