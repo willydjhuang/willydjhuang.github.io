@@ -34,16 +34,11 @@ layout: default
         {%- endif %}
 
         <div class="clearfix">{{ content }}</div>
-
+        
         <!-- Education -->
         {% if page.education -%}
         <h2>Education</h2>
         {%- include education.html limit=true %} {%- endif %}
-
-        <!-- Research Experience -->
-        {% if page.research_experience -%}
-        <h2>Research Experiences</h2>
-        {%- include research_exps.html limit=true %} {%- endif %}
 
         <!-- News -->
         {% if page.news and site.announcements.enabled -%}

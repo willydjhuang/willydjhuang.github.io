@@ -12,4 +12,3 @@ icon: ntu_logo.png
 
 _Sep 2019 - June 2023_
 
-###### Overall GPA: 4.17/4.3, Last-60 GPA: 4.19/4.3
