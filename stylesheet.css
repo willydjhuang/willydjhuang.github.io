@@ -81,43 +81,43 @@ tr,
 p,
 a {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 h2 {
   margin: 0;
   font-weight: normal;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 .papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
 }
 
 .name {
-  padding-top: 20px;
+  padding-top: 1.25rem;
   margin: 0;
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
+  font-size: 2rem;
 }
 
 .one {
-  width: 160px;
-  height: 160px;
+  width: 10rem;
+  height: 10rem;
   position: relative;
 }
 
 .two {
-  width: 160px;
-  height: 160px;
+  width: 10rem;
+  height: 10rem;
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
@@ -136,7 +136,7 @@ span.highlight {
 
 .colored-box {
     color: black;
-    padding: 20px;
+    padding: 1.25rem;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 0.625rem;
 }
