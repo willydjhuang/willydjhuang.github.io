@@ -1,0 +1,29 @@
+{
+  "videos": [
+    {
+      "id": "0marcel",
+      "video": "resources/webpage_demo/0marcel.mp4",
+      "thumbnail": "resources/webpage_demo/thumbnails/0marcel.jpg"
+    },
+    {
+      "id": "0n306",
+      "video": "resources/webpage_demo/0n306.mp4",
+      "thumbnail": "resources/webpage_demo/thumbnails/0n306.jpg"
+    },
+    {
+      "id": "175",
+      "video": "resources/webpage_demo/175.mp4",
+      "thumbnail": "resources/webpage_demo/thumbnails/175.jpg"
+    },
+    {
+      "id": "218",
+      "video": "resources/webpage_demo/218.mp4",
+      "thumbnail": "resources/webpage_demo/thumbnails/218.jpg"
+    },
+    {
+      "id": "wojtek",
+      "video": "resources/webpage_demo/wojtek.mp4",
+      "thumbnail": "resources/webpage_demo/thumbnails/wojtek.jpg"
+    }
+  ]
+}

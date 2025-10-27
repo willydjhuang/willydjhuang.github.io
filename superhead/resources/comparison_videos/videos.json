@@ -1,0 +1,24 @@
+{
+  "videos": [
+    {
+      "id": "030",
+      "video": "resources/comparison_videos/video_demos_030.mp4",
+      "title": "Subject 030"
+    },
+    {
+      "id": "081",
+      "video": "resources/comparison_videos/video_demos_081.mp4",
+      "title": "Subject 081"
+    },
+    {
+      "id": "140",
+      "video": "resources/comparison_videos/video_demos_140.mp4",
+      "title": "Subject 140"
+    },
+    {
+      "id": "175",
+      "video": "resources/comparison_videos/video_demos_175.mp4",
+      "title": "Subject 175"
+    }
+  ]
+}

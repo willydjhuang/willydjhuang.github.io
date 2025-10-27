@@ -1,0 +1,19 @@
+{
+  "videos": [
+    {
+      "id": "marcel",
+      "video": "resources/webpage_demo/marcel.mp4",
+      "thumbnail": "resources/webpage_demo/thumbnails/marcel.jpg"
+    },
+    {
+      "id": "person",
+      "video": "resources/webpage_demo/person.mp4",
+      "thumbnail": "resources/webpage_demo/thumbnails/person.jpg"
+    },
+    {
+      "id": "wojtek",
+      "video": "resources/webpage_demo/wojtek.mp4",
+      "thumbnail": "resources/webpage_demo/thumbnails/wojtek.jpg"
+    }
+  ]
+}
