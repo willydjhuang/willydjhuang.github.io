@@ -250,6 +250,25 @@ li {
   will-change: transform;
 }
 
+/* Triple comparison container */
+.triple-comparison-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Wrapper for each video comparison */
+.video-comparison-wrapper {
+  flex: 1;
+  max-width: 32%;
+  min-width: 0; /* Allow shrinking */
+}
+
 /* Wrapper around canvas - transparent, no background */
 .video-comparison-container {
   margin-bottom: 10px;
@@ -266,6 +285,21 @@ li {
   background: #000;
   display: block;
   margin: 0 auto;
+  width: 100%;
+  height: auto;
+  cursor: ew-resize; /* Show that it's draggable */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 1024px) {
+  .triple-comparison-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .video-comparison-wrapper {
+    max-width: 100%;
+  }
 }
 
 /* Teaser thumbnail gallery styling */

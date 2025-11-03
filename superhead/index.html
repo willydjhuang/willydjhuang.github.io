@@ -51,6 +51,7 @@
   <script src="./static/js/index.js"></script>
   <script src="./static/js/app.js"></script>
   <script src="./static/js/video_comparison.js"></script>
+  <script src="./static/js/triple_video_comparison.js"></script>
 
   <link rel="stylesheet" href="./static/css/dics.original.css">
   <script src="./static/js/event_handler.js"></script>
@@ -61,22 +62,29 @@
     }
 
     // Global video sources object (populated dynamically)
-    var videoSources = {};
+    var exampleSources = {};
 
     // Load videos from JSON and populate gallery
     fetch('resources/webpage_demo/videos.json')
       .then(response => response.json())
       .then(data => {
         var gallery = document.getElementById('thumbnail-gallery');
-        var video = document.getElementById('xyalias6');
+        var videoLeft = document.getElementById('videoLeft');
+        var videoMiddle = document.getElementById('videoMiddle');
+        var videoRight = document.getElementById('videoRight');
 
         // Build video sources mapping
-        data.videos.forEach(function(item) {
-          videoSources[item.id] = item.video;
+        data.examples.forEach(function(item) {
+          exampleSources[item.id] = {
+            left: item.left_video,
+            middle: item.middle_video,
+            right: item.right_video,
+            thumbnail: item.thumbnail
+          };
         });
 
         // Create thumbnail elements
-        data.videos.forEach(function(item, index) {
+        data.examples.forEach(function(item, index) {
           var thumbDiv = document.createElement('div');
           thumbDiv.className = 'teaser-thumbnail' + (index === 0 ? ' active' : '');
           thumbDiv.onclick = function() { switchTeaserVideo(item.id, this); };
@@ -89,33 +97,47 @@
           gallery.appendChild(thumbDiv);
         });
 
-        // Load first video with Safari compatibility
-        if (data.videos.length > 0) {
-          video.src = data.videos[0].video;
-          
+        // Load first example with Safari compatibility
+        if (data.examples.length > 0) {
+          var firstExample = data.examples[0];
+          videoLeft.src = firstExample.left_video;
+          videoMiddle.src = firstExample.middle_video;
+          videoRight.src = firstExample.right_video;
+
           // Safari-compatible initialization
-          function initializeFirstVideo() {
-            if (video.videoWidth > 0 && video.videoHeight > 0) {
-              console.log('First video loaded successfully');
-              resizeAndPlay(video);
-            } else {
-              // Retry if dimensions not ready
-              setTimeout(initializeFirstVideo, 100);
+          var videosLoaded = {left: false, middle: false, right: false};
+
+          function checkAllVideosLoaded() {
+            if (videosLoaded.left && videosLoaded.middle && videosLoaded.right) {
+              console.log('All videos loaded successfully');
+              resizeAndPlayTriple(videoLeft, videoMiddle, videoRight);
             }
           }
-          
-          // Multiple event listeners for Safari compatibility
-          video.onloadedmetadata = initializeFirstVideo;
-          video.oncanplay = initializeFirstVideo;
-          video.onloadeddata = initializeFirstVideo;
-          
+
+          function initializeVideo(video, key) {
+            return function() {
+              if (video.videoWidth > 0 && video.videoHeight > 0) {
+                console.log(key + ' video loaded');
+                videosLoaded[key] = true;
+                checkAllVideosLoaded();
+              } else {
+                setTimeout(initializeVideo(video, key), 100);
+              }
+            };
+          }
+
+          // Set up event listeners for each video
+          videoLeft.onloadedmetadata = initializeVideo(videoLeft, 'left');
+          videoLeft.oncanplay = initializeVideo(videoLeft, 'left');
+          videoMiddle.onloadedmetadata = initializeVideo(videoMiddle, 'middle');
+          videoMiddle.oncanplay = initializeVideo(videoMiddle, 'middle');
+          videoRight.onloadedmetadata = initializeVideo(videoRight, 'right');
+          videoRight.oncanplay = initializeVideo(videoRight, 'right');
+
           // Fallback timeout
           setTimeout(function() {
-            if (video.videoWidth > 0 && video.videoHeight > 0) {
-              initializeFirstVideo();
-            } else {
-              console.log('Video loading timeout - trying manual initialization');
-              video.load();
+            if (videoLeft.videoWidth > 0 && videoMiddle.videoWidth > 0 && videoRight.videoWidth > 0) {
+              checkAllVideosLoaded();
             }
           }, 2000);
         }
@@ -126,40 +148,70 @@
 
     // Video switching function for teaser section (Safari-compatible)
     function switchTeaserVideo(sceneName, thumbnailElement) {
-      // Get the video and canvas elements
-      var video = document.getElementById('xyalias6');
-      var canvas = document.getElementById('xyalias6Merge');
+      // Get all video and canvas elements
+      var videoLeft = document.getElementById('videoLeft');
+      var videoMiddle = document.getElementById('videoMiddle');
+      var videoRight = document.getElementById('videoRight');
+      var canvasLeft = document.getElementById('videoLeftMerge');
+      var canvasMiddle = document.getElementById('videoMiddleMerge');
+      var canvasRight = document.getElementById('videoRightMerge');
 
-      // Update video source
-      if (videoSources[sceneName]) {
-        // Pause current video
-        video.pause();
+      // Update video sources
+      if (exampleSources[sceneName]) {
+        // Pause all videos
+        videoLeft.pause();
+        videoMiddle.pause();
+        videoRight.pause();
 
-        // Clear canvas to prevent flickering
-        var ctx = canvas.getContext('2d');
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Clear all canvases to prevent flickering
+        var ctxLeft = canvasLeft.getContext('2d');
+        var ctxMiddle = canvasMiddle.getContext('2d');
+        var ctxRight = canvasRight.getContext('2d');
+        ctxLeft.clearRect(0, 0, canvasLeft.width, canvasLeft.height);
+        ctxMiddle.clearRect(0, 0, canvasMiddle.width, canvasMiddle.height);
+        ctxRight.clearRect(0, 0, canvasRight.width, canvasRight.height);
 
-        // Update source
-        video.src = videoSources[sceneName];
+        // Update sources
+        videoLeft.src = exampleSources[sceneName].left;
+        videoMiddle.src = exampleSources[sceneName].middle;
+        videoRight.src = exampleSources[sceneName].right;
 
         // Safari-compatible event handling
-        function handleVideoReady() {
-          console.log('Video ready for switching:', sceneName);
-          resizeAndPlay(video);
+        var videosReady = {left: false, middle: false, right: false};
+
+        function checkAllVideosReady() {
+          if (videosReady.left && videosReady.middle && videosReady.right) {
+            console.log('All videos ready for switching:', sceneName);
+            resizeAndPlayTriple(videoLeft, videoMiddle, videoRight);
+          }
         }
 
-        // Multiple event listeners for better Safari compatibility
-        video.onloadedmetadata = handleVideoReady;
-        video.oncanplay = handleVideoReady;
-        video.onloadeddata = handleVideoReady;
+        function handleVideoReady(video, key) {
+          return function() {
+            if (video.videoWidth > 0 && video.videoHeight > 0) {
+              videosReady[key] = true;
+              checkAllVideosReady();
+            }
+          };
+        }
 
-        // Load the new video
-        video.load();
-        
-        // Fallback timeout in case events don't fire
+        // Set up event listeners
+        videoLeft.onloadedmetadata = handleVideoReady(videoLeft, 'left');
+        videoLeft.oncanplay = handleVideoReady(videoLeft, 'left');
+        videoMiddle.onloadedmetadata = handleVideoReady(videoMiddle, 'middle');
+        videoMiddle.oncanplay = handleVideoReady(videoMiddle, 'middle');
+        videoRight.onloadedmetadata = handleVideoReady(videoRight, 'right');
+        videoRight.oncanplay = handleVideoReady(videoRight, 'right');
+
+        // Load all videos
+        videoLeft.load();
+        videoMiddle.load();
+        videoRight.load();
+
+        // Fallback timeout
         setTimeout(function() {
-          if (video.videoWidth > 0 && video.videoHeight > 0) {
-            handleVideoReady();
+          if (videoLeft.videoWidth > 0 && videoMiddle.videoWidth > 0 && videoRight.videoWidth > 0) {
+            checkAllVideosReady();
           }
         }, 1000);
       }
@@ -353,9 +405,31 @@
       <div class="columns is-centered has-text-centered">
         <div class="column is-full-width">
 
-          <div class="video-comparison-container">
-            <video class="video" width="100%" id="xyalias6" loop playsinline autoplay muted preload="metadata" src="" onplay="resizeAndPlay(this)" onloadedmetadata="resizeAndPlay(this)" style="height: 0px;"></video>
-            <canvas height=0 class="videoMerge" id="xyalias6Merge"></canvas>
+          <!-- Three side-by-side comparison containers -->
+          <div class="triple-comparison-container" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 20px;">
+            <!-- Left comparison -->
+            <div class="video-comparison-wrapper" style="flex: 1; max-width: 32%;">
+              <div class="video-comparison-container">
+                <video class="video" width="100%" id="videoLeft" loop playsinline autoplay muted preload="metadata" src="" style="height: 0px;"></video>
+                <canvas height=0 class="videoMerge" id="videoLeftMerge"></canvas>
+              </div>
+            </div>
+
+            <!-- Middle comparison -->
+            <div class="video-comparison-wrapper" style="flex: 1; max-width: 32%;">
+              <div class="video-comparison-container">
+                <video class="video" width="100%" id="videoMiddle" loop playsinline autoplay muted preload="metadata" src="" style="height: 0px;"></video>
+                <canvas height=0 class="videoMerge" id="videoMiddleMerge"></canvas>
+              </div>
+            </div>
+
+            <!-- Right comparison -->
+            <div class="video-comparison-wrapper" style="flex: 1; max-width: 32%;">
+              <div class="video-comparison-container">
+                <video class="video" width="100%" id="videoRight" loop playsinline autoplay muted preload="metadata" src="" style="height: 0px;"></video>
+                <canvas height=0 class="videoMerge" id="videoRightMerge"></canvas>
+              </div>
+            </div>
           </div>
 
           <!-- Thumbnail Gallery for Video Switching (dynamically populated) -->
@@ -364,7 +438,7 @@
           </div>
 
           <h2 class="subtitle has-text-centered" style="margin-top: 15px">
-            TL;DR: Given a low-resolution 3D head avatar reconstructed from low-quality captures, 
+            TL;DR: Given a low-resolution 3D head avatar reconstructed from low-quality captures,
             <b>SuperHead</b> super-resolves high-fidelity geometry and detailed textures while ensuring multiview and temporal consistency under diverse facial expressions.
           </h2>
         </div>
