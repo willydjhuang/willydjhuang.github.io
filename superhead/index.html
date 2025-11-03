@@ -400,15 +400,15 @@
 </section>
 
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container is-fullhd">
     <div class="hero-body">
       <div class="columns is-centered has-text-centered">
-        <div class="column is-full-width">
+        <div class="column is-full-width" style="padding-left: 0; padding-right: 0;">
 
           <!-- Three side-by-side comparison containers -->
-          <div class="triple-comparison-container" style="display: flex; justify-content: center; gap: 15px; margin-bottom: 20px;">
+          <div class="triple-comparison-container" style="display: flex; justify-content: center; margin-bottom: 20px;">
             <!-- Left comparison -->
-            <div class="video-comparison-wrapper" style="flex: 1; max-width: 32%;">
+            <div class="video-comparison-wrapper">
               <div class="video-comparison-container">
                 <video class="video" width="100%" id="videoLeft" loop playsinline autoplay muted preload="metadata" src="" style="height: 0px;"></video>
                 <canvas height=0 class="videoMerge" id="videoLeftMerge"></canvas>
@@ -416,7 +416,7 @@
             </div>
 
             <!-- Middle comparison -->
-            <div class="video-comparison-wrapper" style="flex: 1; max-width: 32%;">
+            <div class="video-comparison-wrapper">
               <div class="video-comparison-container">
                 <video class="video" width="100%" id="videoMiddle" loop playsinline autoplay muted preload="metadata" src="" style="height: 0px;"></video>
                 <canvas height=0 class="videoMerge" id="videoMiddleMerge"></canvas>
@@ -424,7 +424,7 @@
             </div>
 
             <!-- Right comparison -->
-            <div class="video-comparison-wrapper" style="flex: 1; max-width: 32%;">
+            <div class="video-comparison-wrapper">
               <div class="video-comparison-container">
                 <video class="video" width="100%" id="videoRight" loop playsinline autoplay muted preload="metadata" src="" style="height: 0px;"></video>
                 <canvas height=0 class="videoMerge" id="videoRightMerge"></canvas>
