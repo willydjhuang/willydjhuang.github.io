@@ -27,7 +27,7 @@ body {
 
 /* Override container max-width for teaser section to allow larger videos */
 .teaser .container.is-fullhd {
-  max-width: 100%;
+  max-width: 80%;
   padding-left: 2rem;
   padding-right: 2rem;
 }
