@@ -1,272 +1,181 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <title>Ding-Jiun Huang</title>
-
-    <meta name="author" content="Ding-Jiun Huang">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ding-Jiun Willy Huang</title>
+    <meta name="author" content="Ding-Jiun Huang">
+    <meta name="description" content="Ding-Jiun (Willy) Huang — PhD student at the University of Toronto working on human-centered world modeling and 3D/4D generation.">
     <link rel="shortcut icon" href="images/favicon/star.ico" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
+
+    <!-- Urbanist: Light 300 / Regular 400 / Medium 500 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="stylesheet.css">
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Ding-Jiun Huang
-                </p>
-                <p>
-    I am a first-year PhD student at the University of Toronto, advised by Prof. <a href="https://davidlindell.com/">David Lindell</a>.
-		Previously, I was a master student at Carnegie Mellon University, advised by Prof. <a href="https://www.cs.cmu.edu/~ftorre/">Fernando de la Torre</a> 
-    and Prof. <a href="https://czhang0528.github.io/">Cheng Zhang</a>. 
-    My researches focus on digital human reconstruction, including 3D head avatar and 
-    simulation-ready 3D garment reconstruction. Prior to this, I had the previlege to be advised by Prof. <a href="http://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a> 
-    and Dr. <a href="https://sunset1995.github.io/">Cheng Sun</a> from NVIDIA Research.<br><br>
-		I completed my undergraduate studies at National Taiwan University, 
-    and had the pleasure to work with Prof. <a href="https://www.csie.ntu.edu.tw/~cwlin/">Chung-Wei Lin</a> in my undergraduate research for autonomous vehicles motion planning.
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:djhuang322@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="data/willy-cv.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?user=vhIg_LUAAAAJ&hl=en">Scholar</a> &nbsp;
-                  <!-- <a href="https://twitter.com/jon_barron">Twitter</a> &nbsp;/&nbsp; -->
-                  <!-- <a href="https://github.com/jonbarron/">Github</a> -->
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/profile_pic.jpg">
-                  <img style="width:100%;max-width:100%;object-fit: cover; border-radius: 18px;" alt="profile photo" src="images/profile_pic.jpg" class="hoverZoomLink">
-                </a>
-              </td>
-            </tr>
-          </tbody></table>
-          <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                
-                </p>
-              </td>
-            </tr>
-          </tbody></table> -->
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <main class="page">
 
-    <tr onmouseout="bolt3d_stop()" onmouseover="bolt3d_start()">
-      <td style="padding:16px;width:32%;vertical-align:middle">
-        <div class="one" style="width:100%;height:100%;">
-          <img src='images/omnifabric_teaser.gif' alt="TextureGarment preview" style="width:100%;height:100%;object-fit:contain;display:block;">
-        </div>
-        <script type="text/javascript">
-          function bolt3d_start() {
-            // no-op since there's no video/image transition for this entry
-          }
+      <nav class="nav">
+        <a href="mailto:dingjiun.huang@mail.utoronto.ca">Email</a>
+        <a href="data/willy-cv.pdf" target="_blank" rel="noopener">CV</a>
+        <a href="https://scholar.google.com/citations?user=vhIg_LUAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar</a>
+        <a href="https://x.com/djhuang322" target="_blank" rel="noopener">Twitter</a>
+      </nav>
 
-          function bolt3d_stop() {
-            // no-op since there's no video/image transition for this entry
-          }
-          bolt3d_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://willydjhuang.github.io/">
-          <span class="papertitle">OmniFabric: Coherent UV Space Texture Synthesis for 3D Garment Reconstruction</span>
-        </a>
-        <br>
-        <strong>Ding-Jiun Huang</strong>,
-        <a href="https://harrywang355.github.io/">Yuanhao Wang</a>,
-        <a href="https://czhang0528.github.io/">Cheng Zhang</a>,
-        <a href="https://hbertiche.github.io/">Hugo Bertiche</a>,
-        <a href="https://alexandruichim.com/">Alexandru-Eugen Ichim</a>,
-        <a href="https://thabobeeler.com/">Thabo Beeler</a>,
-        <a href="https://www.cs.cmu.edu/~ftorre/">Fernando De la Torre</a>
-        <br>
-        <em>SIGGRAPH Asia</em>, 2026
-        <br>
-        <a href="https://humansensinglab.github.io/OmniFabric/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2609.30234" target="_blank">paper</a>
-        <p></p>
+      <header class="intro">
+        <h1 class="name"><span class="nw">Ding-Jiun</span><br>Willy Huang</h1>
+        <img class="photo" src="images/profile_waterfall.jpg" alt="Willy Huang in front of a waterfall">
+      </header>
+
+      <section class="bio">
         <p>
-          Given a single in-the-wild image of a human garment, 
-          OmniFabric synthesizes the simulation-ready 3D garment through generating
-          textured sewing patterns.
+          I am a PhD student at the University of Toronto, advised by Prof.
+          <a href="https://davidlindell.com/" target="_blank" rel="noopener">David Lindell</a>.
+          I received my master’s degree from Carnegie Mellon University, where I was advised by Prof.
+          <a href="https://www.cs.cmu.edu/~ftorre/" target="_blank" rel="noopener">Fernando de la Torre</a>
+          and Prof.
+          <a href="https://czhang0528.github.io/" target="_blank" rel="noopener">Cheng Zhang</a>.
+          Prior to this, I had the privilege of being advised by Prof.
+          <a href="https://vllab.ee.ntu.edu.tw/ycwang.html" target="_blank" rel="noopener"><span class="nw">Yu-Chiang</span> Frank Wang</a>
+          and Dr.
+          <a href="https://sunset1995.github.io/" target="_blank" rel="noopener">Cheng Sun</a>
+          from NVIDIA Research.
         </p>
-      </td>
-    </tr>
-
-    <tr onmouseout="bolt3d_stop()" onmouseover="bolt3d_start()">
-      <td style="padding:16px;width:32%;vertical-align:middle">
-        <div class="one" style="width:100%;height:100%;">
-          <img src='images/superhead_thumbnail.png' alt="SuperHead preview" style="width:100%;height:100%;object-fit:contain;display:block;">
-        </div>
-        <script type="text/javascript">
-          function bolt3d_start() {
-            // no-op since there's no video/image transition for this entry
-          }
-
-          function bolt3d_stop() {
-            // no-op since there's no video/image transition for this entry
-          }
-          bolt3d_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://humansensinglab.github.io/super-head/">
-          <span class="papertitle">From Blurry to Believable: Enhancing Low-quality Talking Heads with 3D Generative Priors</span>
-        </a>
-        <br>
-        <strong>Ding-Jiun Huang</strong>,
-        <a href="https://harrywang355.github.io/">Yuanhao Wang</a>,
-        <a href="https://rickyyuan07.github.io/">Shao-Ji Yuan</a>,
-        <a href="https://www.albertmosellamontoro.com/">Albert Mosella-Montoro</a>,
-        <a href="https://www.ri.cmu.edu/ri-people/francisco-vicente-carrasco/">Francisco Vicente Carrasco</a>,
-        <a href="https://czhang0528.github.io/">Cheng Zhang</a>,
-        <a href="https://www.cs.cmu.edu/~ftorre/">Fernando de la Torre</a>
-        <br>
-        <em>3DV</em>, 2026
-        <br>
-        <a href="https://humansensinglab.github.io/super-head/">project page</a>
-        /
-        <a href="https://www.arxiv.org/abs/2602.06122">paper</a>
-        <p></p>
         <p>
-          Given a low-resolution 3D head avatar reconstructed from low-quality captures, SuperHead super-resolves high-fidelity geometry and detailed textures while ensuring multiview and temporal consistency under diverse facial expressions.
+          My research focuses on <span class="nw">human-centered</span> world modeling and 3D/4D generation.
         </p>
-      </td>
-    </tr>
+      </section>
 
-    <tr onmouseout="bolt3d_stop()" onmouseover="bolt3d_start()">
-      <td style="padding:16px;width:32%;vertical-align:middle">
-        <div class="one" style="width:100%;height:100%;">
-          <img src='images/assr-nerf.gif' alt="ASSR-NeRF preview" style="width:100%;height:100%;object-fit:contain;display:block;">
-        </div>
-        <script type="text/javascript">
-          function bolt3d_start() {
-            // no-op since there's no video/image transition for this entry
-          }
+      <h2 class="section-title">Publications</h2>
 
-          function bolt3d_stop() {
-            // no-op since there's no video/image transition for this entry
-          }
-          bolt3d_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://assr-nerf.github.io/">
-          <span class="papertitle">ASSR-NeRF: Arbitrary-Scale Super-Resolution on Voxel Grid for High-Quality Radiance Fields Reconstruction</span>
-        </a>
-        <br>
-        <strong>Ding-Jiun Huang</strong>,
-        <a href="https://zitingchou.github.io/">Zi-Ting Chou</a>,
-        <a href="https://vllab.ee.ntu.edu.tw/ycwang.html">Yu-Chiang Frank Wang</a>,
-        <a href="https://sunset1995.github.io/">Cheng Sun</a>
-        <br>
-        <em>arXiv preprint</em>, 2024
-        <br>
-        <a href="https://assr-nerf.github.io/">project page</a>
-        /
-        <a href="https://arxiv.org/abs/2406.20066">arXiv</a>
-        <p></p>
-        <p>
-		    Given a neural radiance field optimized from low-quality capturings, our generalizable approach directly enhances the 3D representation, leading to high-quality renderings.
-        </p>
-      </td>
-    </tr>
+      <ul class="pubs">
 
-    <tr onmouseout="ever_stop()" onmouseover="ever_start()">
-      <td style="padding:16px;width:32%;vertical-align:middle">
-        <div class="one" style="width:100%;height:100%;">
-          <img src='images/sb-vqa_preview.gif' alt="SB-VQA preview" style="width:100%;height:100%;object-fit:contain;display:block;">
-        </div>
-        <script type="text/javascript">
-          function bolt3d_start() {
-            // no-op since there's no video/image transition for this entry
-          }
+        <li class="pub">
+          <div class="pub-media">
+            <a class="pub-thumb" href="https://humansensinglab.github.io/OmniFabric/" target="_blank" rel="noopener">
+              <img src="images/thumbs/omnifabric_teaser.webp" alt="OmniFabric teaser" style="object-position: 50% 50%;">
+            </a>
+          </div>
+          <p class="pub-venue">SIGGRAPH Asia 2026</p>
+          <div class="pub-detail">
+            <a class="pub-title" href="https://humansensinglab.github.io/OmniFabric/" target="_blank" rel="noopener">OmniFabric: Coherent UV Space Texture Synthesis for 3D Garment Reconstruction</a>
+            <p class="pub-authors">
+              <span class="nw">Ding-Jiun</span> Huang,
+              <a href="https://harrywang355.github.io/" target="_blank" rel="noopener">Yuanhao Wang</a>,
+              <a href="https://czhang0528.github.io/" target="_blank" rel="noopener">Cheng Zhang</a>,
+              <a href="https://hbertiche.github.io/" target="_blank" rel="noopener">Hugo Bertiche</a>,
+              <a href="https://alexandruichim.com/" target="_blank" rel="noopener"><span class="nw">Alexandru-Eugen</span> Ichim</a>,
+              <a href="https://thabobeeler.com/" target="_blank" rel="noopener">Thabo Beeler</a>,
+              <a href="https://www.cs.cmu.edu/~ftorre/" target="_blank" rel="noopener">Fernando De la Torre</a>
+            </p>
+            <p class="pub-links">
+              <a href="https://humansensinglab.github.io/OmniFabric/" target="_blank" rel="noopener">[project page]</a>
+              <a href="https://arxiv.org/abs/2609.30234" target="_blank" rel="noopener">[paper]</a>
+            </p>
+          </div>
+        </li>
 
-          function bolt3d_stop() {
-            // no-op since there's no video/image transition for this entry
-          }
-          bolt3d_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-        <a href="https://arxiv.org/abs/2305.08408">
-			<span class="papertitle">SB-VQA: Stack-Based Video Quality Assessment Framework for Video Enhancement</span>
-    </a>
-      
-        <br>
-				<strong>Ding-Jiun Huang</strong>,
-				Yu-Ting Kao,
-				Tieh-Hung Chuang,
-				<a href="https://www.linkedin.com/in/yachun/">Ya-Chun Tsai</a>,
-				<a href="https://scholar.google.com/citations?user=zH6ERg8AAAAJ&hl">Jing-Kai Lou</a>,
-				<a href="https://www.linkedin.com/in/drakeguan/">Shuen-Huei Guan</a>
-				<br>
-        <em>IEEE/CVF CVPR NTIRE</em>, 2023
-        <br>
-        <a href="https://arxiv.org/abs/2305.08408">arXiv</a>
-        <p></p>
-        <p>
-				Proposing a stack-based framework for video quality assessment (VQA) of videos enhanced by deep-learning-based methods.
-        </p>
-      </td>
-    </tr>
+        <li class="pub">
+          <div class="pub-media">
+            <a class="pub-thumb" href="https://humansensinglab.github.io/super-head/" target="_blank" rel="noopener">
+              <img src="images/superhead_thumbnail.png" alt="SuperHead teaser" style="object-position: 50% 18.1%;">
+            </a>
+          </div>
+          <p class="pub-venue">3DV 2026</p>
+          <div class="pub-detail">
+            <a class="pub-title" href="https://humansensinglab.github.io/super-head/" target="_blank" rel="noopener">From Blurry to Believable: Enhancing <span class="nw">Low-quality</span> Talking Heads with 3D Generative Priors</a>
+            <p class="pub-authors">
+              <span class="nw">Ding-Jiun</span> Huang,
+              <a href="https://harrywang355.github.io/" target="_blank" rel="noopener">Yuanhao Wang</a>,
+              <a href="https://rickyyuan07.github.io/" target="_blank" rel="noopener"><span class="nw">Shao-Ji</span> Yuan</a>,
+              <a href="https://www.albertmosellamontoro.com/" target="_blank" rel="noopener">Albert <span class="nw">Mosella-Montoro</span></a>,
+              <a href="https://www.ri.cmu.edu/ri-people/francisco-vicente-carrasco/" target="_blank" rel="noopener">Francisco Vicente Carrasco</a>,
+              <a href="https://czhang0528.github.io/" target="_blank" rel="noopener">Cheng Zhang</a>,
+              <a href="https://www.cs.cmu.edu/~ftorre/" target="_blank" rel="noopener">Fernando de la Torre</a>
+            </p>
+            <p class="pub-links">
+              <a href="https://humansensinglab.github.io/super-head/" target="_blank" rel="noopener">[project page]</a>
+              <a href="https://www.arxiv.org/abs/2602.06122" target="_blank" rel="noopener">[paper]</a>
+            </p>
+          </div>
+        </li>
 
+        <li class="pub">
+          <div class="pub-media">
+            <a class="pub-thumb" href="https://assr-nerf.github.io/" target="_blank" rel="noopener">
+              <img src="images/thumbs/assr-nerf.webp" alt="ASSR-NeRF teaser" style="object-position: 50% 0%;">
+            </a>
+          </div>
+          <p class="pub-venue">arXiv preprint 2024</p>
+          <div class="pub-detail">
+            <a class="pub-title" href="https://assr-nerf.github.io/" target="_blank" rel="noopener"><span class="nw">ASSR-NeRF</span>: <span class="nw">Arbitrary-Scale</span> <span class="nw">Super-Resolution</span> on Voxel Grid for <span class="nw">High-Quality</span> Radiance Fields Reconstruction</a>
+            <p class="pub-authors">
+              <span class="nw">Ding-Jiun</span> Huang,
+              <a href="https://www.linkedin.com/in/zi-ting-chou-251875201/" target="_blank" rel="noopener"><span class="nw">Zi-Ting</span> Chou</a>,
+              <a href="https://vllab.ee.ntu.edu.tw/ycwang.html" target="_blank" rel="noopener"><span class="nw">Yu-Chiang</span> Frank Wang</a>,
+              <a href="https://sunset1995.github.io/" target="_blank" rel="noopener">Cheng Sun</a>
+            </p>
+            <p class="pub-links">
+              <a href="https://assr-nerf.github.io/" target="_blank" rel="noopener">[project page]</a>
+              <a href="https://arxiv.org/abs/2406.20066" target="_blank" rel="noopener">[paper]</a>
+            </p>
+          </div>
+        </li>
 
+        <li class="pub">
+          <div class="pub-media">
+            <a class="pub-thumb" href="https://arxiv.org/abs/2305.08408" target="_blank" rel="noopener">
+              <img src="images/thumbs/sb-vqa_preview.webp" alt="SB-VQA teaser" style="object-position: 50% 50%;">
+            </a>
+          </div>
+          <p class="pub-venue">CVPR NTIRE Workshop 2023</p>
+          <div class="pub-detail">
+            <a class="pub-title" href="https://arxiv.org/abs/2305.08408" target="_blank" rel="noopener"><span class="nw">SB-VQA</span>: <span class="nw">Stack-Based</span> Video Quality Assessment Framework for Video Enhancement</a>
+            <p class="pub-authors">
+              <span class="nw">Ding-Jiun</span> Huang,
+              <span class="nw">Yu-Ting</span> Kao,
+              <span class="nw">Tieh-Hung</span> Chuang,
+              <a href="https://www.linkedin.com/in/yachun/" target="_blank" rel="noopener"><span class="nw">Ya-Chun</span> Tsai</a>,
+              <a href="https://scholar.google.com/citations?user=zH6ERg8AAAAJ&amp;hl" target="_blank" rel="noopener"><span class="nw">Jing-Kai</span> Lou</a>,
+              <a href="https://www.linkedin.com/in/drakeguan/" target="_blank" rel="noopener"><span class="nw">Shuen-Huei</span> Guan</a>
+            </p>
+            <p class="pub-links">
+              <a href="https://arxiv.org/abs/2305.08408" target="_blank" rel="noopener">[paper]</a>
+            </p>
+          </div>
+        </li>
 
+        <li class="pub">
+          <div class="pub-media">
+            <a class="pub-thumb" href="https://ieeexplore.ieee.org/document/10186667" target="_blank" rel="noopener">
+              <img src="images/thumbs/platoon_preview.webp" alt="Fault-tolerant platooning teaser" style="object-position: 50% 50%;">
+            </a>
+          </div>
+          <p class="pub-venue">IEEE Intelligent Vehicles Symposium 2023</p>
+          <div class="pub-detail">
+            <a class="pub-title" href="https://ieeexplore.ieee.org/document/10186667" target="_blank" rel="noopener"><span class="nw">Consensus-Based</span> <span class="nw">Fault-Tolerant</span> Platooning for Connected and Autonomous Vehicles</a>
+            <p class="pub-authors">
+              <a href="https://www.linkedin.com/in/tzu-yen-tseng/" target="_blank" rel="noopener"><span class="nw">Tzu-Yen</span> Tseng</a>,
+              <span class="nw">Ding-Jiun</span> Huang,
+              <a href="https://ieeexplore.ieee.org/author/37089928169" target="_blank" rel="noopener"><span class="nw">Jia-You</span> Lin</a>,
+              <span class="nw">Po-Jui</span> Chang,
+              <a href="https://www.csie.ntu.edu.tw/~cwlin/" target="_blank" rel="noopener"><span class="nw">Chung-Wei</span> Lin</a>,
+              <a href="https://www.ri.cmu.edu/ri-faculty/changliu-liu/" target="_blank" rel="noopener">Changliu Liu</a>
+            </p>
+            <p class="pub-links">
+              <a href="https://ieeexplore.ieee.org/document/10186667" target="_blank" rel="noopener">[paper]</a>
+            </p>
+          </div>
+        </li>
 
-    <tr onmouseout="r2r_stop()" onmouseover="r2r_start()">
-      <td style="padding:16px;width:32%;vertical-align:middle">
-        <div class="one" style="width:100%;height:100%;">
-          <img src='images/platoon_preview.gif' alt="Platooning preview" style="width:100%;height:100%;object-fit:contain;display:block;">
-        </div>
-      </td>
-      <td style="padding:8px;width:68%;vertical-align:middle">
-        <a href="https://ieeexplore.ieee.org/document/10186667">
-          <span class="papertitle">Consensus-Based Fault-Tolerant Platooning for Connected and Autonomous Vehicles</span>
-        </a>
-        <br>
-				<a href="https://www.linkedin.com/in/tzu-yen-tseng/">Tzu-Yen Tseng</a>,
-        <strong>Ding-Jiun Huang</strong>,
-				<a href="https://ieeexplore.ieee.org/author/37089928169">Jia-You Lin</a>,
-				Po-Jui Chang,
-				<a href="https://www.csie.ntu.edu.tw/~cwlin/">Chung-Wei Lin</a>,
-				<a href="https://www.ri.cmu.edu/ri-faculty/changliu-liu/">Changliu Liu</a>
-        <br>
-        <em>IEEE Intelligent Vehicles Symposium</em>, 2023
-        <br>
-        <a href="https://ieeexplore.ieee.org/document/10186667">IEEE Xplore</a>
-        <p></p>
-        <p>
-				Developing a motion planning algorithm for autonomous vehicles to handle malicious attack and communication faults in a platooning system.
-        </p>
-      </td>
-    </tr>
-            
+      </ul>
 
-          </tbody></table>
+      <footer class="footer">© 2026 Willy Huang</footer>
 
-          
-					
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-              <td style="padding:0px">
-                <br>
-                <p style="text-align:right;font-size:0.875rem;">
-                  This personal page template was borrowed from  <a href="https://github.com/jonbarron/jonbarron_website">source code</a>. 
-              </td>
-            </tr>
-          </tbody></table>
-        </td>
-      </tr>
-    </table>
+    </main>
   </body>
 </html>
