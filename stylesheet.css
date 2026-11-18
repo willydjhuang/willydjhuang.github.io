@@ -179,7 +179,7 @@ img {
   grid-row: 1;
   margin-bottom: calc(3.7 * var(--u));
   font-weight: 300;
-  font-size: calc(6 * var(--u));
+  font-size: calc((6 + 1 / 2.25) * var(--u)); /* design 6pt, +1px at desktop scale */
 }
 
 /* figure cell spans the whole text block: venue -> title -> authors -> links */
@@ -215,19 +215,19 @@ img {
 .pub-title {
   display: block;
   font-weight: 400;
-  font-size: calc(7.5 * var(--u));
+  font-size: calc((7.5 + 1 / 2.25) * var(--u)); /* design 7.5pt, +1px at desktop scale */
 }
 
 .pub-authors {
   margin-top: calc(3.65 * var(--u));
   font-weight: 400;
-  font-size: calc(5 * var(--u));
+  font-size: calc((5 + 1 / 2.25) * var(--u)); /* design 5pt, +1px at desktop scale */
 }
 
 .pub-links {
   margin-top: calc(5.25 * var(--u));
   font-weight: 400;
-  font-size: calc(5 * var(--u));
+  font-size: calc((5 + 1 / 2.25) * var(--u)); /* design 5pt, +1px at desktop scale */
 }
 
 .pub-links a:hover,
